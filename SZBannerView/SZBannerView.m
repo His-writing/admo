@@ -113,7 +113,7 @@
     
     NSString *imageUrlString = [_listArray objectAtIndex:index];
     
-    [[QYYLgoogleLib getQYYLGooglelib]QYYLGADInterstitial];
+    [[QYYLgoogleLib getQYYLGooglelib]QYYLGADBannerView];
 
     titleLable.text=[arr_AdTitles objectAtIndex:index];
     titleContent.text=[arr_adContent objectAtIndex:index];
