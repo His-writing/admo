@@ -1,0 +1,52 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+//设备屏幕大小
+#define __MainScreenFrame   [[UIScreen mainScreen] bounds]
+//设备屏幕宽
+#define __MainScreen_Width  __MainScreenFrame.size.width
+#define __MainScreen_Height __MainScreenFrame.size.height
+
+#define DOWNLOAD_ANIMATIONENDX (__MainScreen_Width-96)
+#define DOWNLOAD_ANIMATIONENDY (__MainScreen_Height-20)
+
+#define RELEASE_FREE(a) if (nil != a){ [a release]; a = nil; }
+
+// 默认汉字字形的名字
+#define kChineseDefaultFontName     @"Heiti SC"
+// 默认英文和数字字形的名字
+#define kEnglishAndNumberDefaultFontName   @"avenir light"
+
+#define LT_SYS_VERSION_COMPARE(version) ([DeviceManager sysVersionCompareWith:(version)])
+
+#define kDidFinishLaunching             @"kDidFinishLaunching"
+
+#define kRecommendViewScroll                @"kRecommendViewScroll"
+
+#define kRefreshUserInfoWithLoginActionNotification @"kRefreshUserInfoWithLoginActionNotification"
+#define kRefreshFavoriteNotification @"kRefreshFavoriteNotification"
+
+#define LTPopMoviePlayerDismissNotification @"LTPopMoviePlayerDismissNotification"
+
+#define kLTPlayerCommentOperationViewWillDestrory    @"kLTPlayerCommentOperationViewWillDestrory"
+
+#define kClickCoverEffectViewTag       9001
+/* 预定义"常量" 20 45 133 49 */
+#define FOCUS_WIDTH 320 //焦点图宽度
+#define FOCUS_HEIGHT 163 //焦点图高度
+#define FOCUS_EXCHANGE_WIDTH 160
+#define MINLENGTH_FRFRESH 85.0f
+#define  IOS_VERSION_IOS7 (DeviceSystemMajorVersion() >= 7)
